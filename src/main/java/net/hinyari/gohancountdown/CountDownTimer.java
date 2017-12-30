@@ -117,7 +117,7 @@ public class CountDownTimer
     }
         
 
-        /*
+        /* 2017年のときのウンコード
         public String getTime()
         {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
