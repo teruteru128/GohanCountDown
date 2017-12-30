@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="net.hinyari.gohancountdown.GohanCountDown">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FormLayout">
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:30px:noGrow"/>
+    <rowspec value="top:5dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:32px:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:m:grow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:d:grow"/>
+    <colspec value="left:5dlu:noGrow"/>
+    <colspec value="fill:max(d;4px):noGrow"/>
+    <colspec value="fill:89px:grow"/>
+    <colspec value="fill:max(d;4px):noGrow"/>
+    <colspec value="fill:m:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:max(d;4px):noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="left:m:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:36px:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:max(d;4px):noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <constraints>
+      <xy x="33" y="12" width="341" height="474"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <hspacer id="c2adf">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="fb403">
+        <constraints>
+          <grid row="1" column="13" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+      </hspacer>
+      <component id="38e90" class="javax.swing.JLabel" binding="label_unt2018s">
+        <constraints>
+          <grid row="14" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <font size="28"/>
+          <horizontalAlignment value="4"/>
+          <text value="00"/>
+        </properties>
+      </component>
+      <component id="d37b3" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="14" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="28"/>
+          <text value="秒"/>
+        </properties>
+      </component>
+      <component id="f5166" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="12" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="28"/>
+          <text value="秒"/>
+        </properties>
+      </component>
+      <component id="d1cf4" class="javax.swing.JLabel" binding="label_unt2018h">
+        <constraints>
+          <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="28"/>
+          <horizontalAlignment value="4"/>
+          <text value="0"/>
+        </properties>
+      </component>
+      <component id="6d532" class="javax.swing.JLabel" binding="label_unt2018m">
+        <constraints>
+          <grid row="14" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="28"/>
+          <horizontalAlignment value="4"/>
+          <text value="00"/>
+        </properties>
+      </component>
+      <component id="8b058" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="14" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="28"/>
+          <text value="分"/>
+        </properties>
+      </component>
+      <component id="28244" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="11" column="1" row-span="1" col-span="12" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="24"/>
+          <text value="2018年まであと"/>
+        </properties>
+      </component>
+      <component id="91d5a" class="javax.swing.JLabel" binding="label_unt2018ss">
+        <constraints>
+          <grid row="12" column="2" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="28"/>
+          <horizontalAlignment value="4"/>
+          <text value="0"/>
+        </properties>
+      </component>
+      <component id="1398b" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="14" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="28"/>
+          <text value="時間"/>
+        </properties>
+      </component>
+      <component id="28cc7" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="11" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="24"/>
+          <horizontalAlignment value="0"/>
+          <text value="GohanCountDown for 2018"/>
+        </properties>
+      </component>
+      <component id="b385c" class="javax.swing.JLabel" binding="label_yearsfrom">
+        <constraints>
+          <grid row="18" column="2" row-span="1" col-span="12" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="24"/>
+          <text value="2017年からの経過時間"/>
+        </properties>
+      </component>
+      <component id="ebd74" class="javax.swing.JLabel" binding="label_from2017ss">
+        <constraints>
+          <grid row="20" column="2" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <font size="28"/>
+          <horizontalAlignment value="4"/>
+          <text value="0"/>
+        </properties>
+      </component>
+      <component id="db2e" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="20" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="28"/>
+          <text value="秒"/>
+        </properties>
+      </component>
+      <component id="25786" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="17" column="2" row-span="1" col-span="11" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="1d015" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="22" column="2" row-span="1" col-span="11" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="24"/>
+          <text value="2019年まであと"/>
+        </properties>
+      </component>
+      <component id="f973b" class="javax.swing.JLabel" binding="label_unt2019ss">
+        <constraints>
+          <grid row="24" column="2" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="28"/>
+          <horizontalAlignment value="4"/>
+          <text value="0"/>
+        </properties>
+      </component>
+      <component id="88137" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="24" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="28"/>
+          <text value="秒"/>
+        </properties>
+      </component>
+      <component id="cf03" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="12" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="24"/>
+          <text value="現在時刻"/>
+        </properties>
+      </component>
+      <component id="531ff" class="javax.swing.JLabel" binding="label_nowtime">
+        <constraints>
+          <grid row="9" column="2" row-span="1" col-span="11" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="28"/>
+          <horizontalAlignment value="4"/>
+          <horizontalTextPosition value="10"/>
+          <text value="0000/00/00 00:00:00"/>
+        </properties>
+      </component>
+      <component id="4295d" class="javax.swing.JLabel" binding="label_server">
+        <constraints>
+          <grid row="3" column="4" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="ea272" class="javax.swing.JLabel" binding="label_appstatus">
+        <constraints>
+          <grid row="5" column="4" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="2c3f4" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <horizontalAlignment value="4"/>
+          <text value="接続中のサーバ"/>
+        </properties>
+      </component>
+      <component id="cb563" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <horizontalAlignment value="4"/>
+          <horizontalTextPosition value="10"/>
+          <text value="接続状況"/>
+        </properties>
+      </component>
+      <vspacer id="f4140">
+        <constraints>
+          <grid row="26" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-vert="false"/>
+        </constraints>
+      </vspacer>
+    </children>
+  </grid>
+</form>
