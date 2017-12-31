@@ -133,11 +133,13 @@ public class CountDownTimer
 
         // 2018年内
         if (lunt2019seconds >= 0) {
-            main.getLabel_unt2019h().setText(String.format("%02d", lunt2019seconds / 3600));
+            main.getLabel_untdays().setText(String.format("%03d", lunt2019seconds / 86400));
+            main.getLabel_unt2019h().setText(String.format("%02d", lunt2019seconds / 3600 - ((lunt2019seconds / 86400 * 24))));
             main.getLabel_unt2019m().setText(String.format("%02d", (lunt2019seconds / 60) % 60));
             main.getLabel_unt2019s().setText(String.format("%02d", lunt2019seconds % 60));
             main.getLabel_from2018ss().setText(String.valueOf(durationfrom2018.getSeconds()));
         } else {    // 2019年後
+            main.getLabel_untdays().setText("000");
             main.getLabel_unt2019h().setText("00");
             main.getLabel_unt2019m().setText("00");
             main.getLabel_unt2019s().setText("00");
