@@ -11,8 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 
-public class GohanCountDown extends JFrame
-{
+public class GohanCountDown {
     private JFrame jFrame;
 
     private JPanel panel1;
@@ -39,14 +38,15 @@ public class GohanCountDown extends JFrame
 
     public GohanCountDown()
     {
-        jFrame = this;
-        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        this.setVisible(true);
-        this.setContentPane(panel1);
-        this.setSize(360, 510);
-        this.setResizable(false);
-        this.setAlwaysOnTop(true);
-        addComponentListener(new ComponentAdapter()
+        jFrame = new JFrame();
+        jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        jFrame.setVisible(true);
+        jFrame.setContentPane(panel1);
+        jFrame.setSize(360, 510);
+        jFrame.setResizable(false);
+        jFrame.setAlwaysOnTop(true);
+        //this.setUndecorated(true);
+        jFrame.addComponentListener(new ComponentAdapter()
         {
             @Override
             public void componentResized(ComponentEvent e)
@@ -101,11 +101,6 @@ public class GohanCountDown extends JFrame
     public JLabel getLabel_nowtime()
     {
         return label_nowtime;
-    }
-
-    public JPanel getPanel()
-    {
-        return panel1;
     }
 
     public JLabel getLabel_yearsfrom()
