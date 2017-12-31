@@ -44,7 +44,6 @@ public class GohanCountDown {
         countDownTimer = new CountDownTimer(this);
         jFrame = new JFrame();
         jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        jFrame.setVisible(true);
         jFrame.setContentPane(panel1);
         jFrame.setSize(360, 510);
         jFrame.setResizable(false);
@@ -58,7 +57,7 @@ public class GohanCountDown {
                 jFrame.setTitle("GohanCountDown(" + e.getComponent().getWidth() + "×" + e.getComponent().getHeight() + ")");
             }
         });
-
+        jFrame.setVisible(true);
     }
 
 
