@@ -21,7 +21,6 @@ public class CountDownTimer
     private GohanCountDown main;
 
     private long rawtime;
-    private Instant ntpTimeInstance;
     private NTPUDPClient ntpClient;
 
     private InetAddress ntpAddress;
@@ -65,7 +64,7 @@ public class CountDownTimer
         try {
             TimeInfo timeInfo = ntpClient.getTime(ntpAddress);
             rawtime = timeInfo.getReturnTime();
-            ntpTimeInstance = Instant.ofEpochMilli(rawtime);
+            Instant ntpTimeInstance = Instant.ofEpochMilli(rawtime);
             // 現在時刻を埋め込む
             LocalDateTime ldt = LocalDateTime.ofInstant(ntpTimeInstance, ZoneId.systemDefault());
             main.getLabel_nowtime().setText(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss").format(ldt));
