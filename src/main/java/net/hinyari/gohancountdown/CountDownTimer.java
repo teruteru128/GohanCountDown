@@ -21,25 +21,26 @@ public class CountDownTimer
     private GohanCountDown main;
 
     private long rawtime;
-    private Instant ntpTimeInstance;
     private NTPUDPClient ntpClient;
 
     private InetAddress ntpAddress;
 
-    private CountDown countDown;
+    private ScheduledExecutorService service;
 
-    public CountDownTimer()
+    public CountDownTimer(GohanCountDown main)
     {
         // メインクラスのインスタンス読み込み
-        main = GohanCountDown.instance;
+        this.main = main;
         try {
             ntpAddress = InetAddress.getByName("ntp.nict.jp");
-            countDown = new CountDown(this);
+
+            service = Executors.newSingleThreadScheduledExecutor();
+            service.scheduleAtFixedRate(this::reloadDisplay,
+                    0, 250, TimeUnit.MILLISECONDS);
             ntpClient = new NTPUDPClient();
             ntpClient.open();
             main.getLabel_appstatus().setText("正常");
 
-            countDown.run();
         } catch (UnknownHostException e) {
             main.getLabel_server().setText("不明なホスト名");
             e.printStackTrace();
@@ -65,7 +66,7 @@ public class CountDownTimer
         try {
             TimeInfo timeInfo = ntpClient.getTime(ntpAddress);
             rawtime = timeInfo.getReturnTime();
-            ntpTimeInstance = Instant.ofEpochMilli(rawtime);
+            Instant ntpTimeInstance = Instant.ofEpochMilli(rawtime);
             // 現在時刻を埋め込む
             LocalDateTime ldt = LocalDateTime.ofInstant(ntpTimeInstance, ZoneId.systemDefault());
             main.getLabel_nowtime().setText(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss").format(ldt));
@@ -114,17 +115,4 @@ public class CountDownTimer
         return rawtime;
     }
 
-}
-
-class CountDown extends Thread
-{
-
-    private ScheduledExecutorService service;
-
-    CountDown(CountDownTimer instance)
-    {
-        service = Executors.newSingleThreadScheduledExecutor();
-        service.scheduleAtFixedRate(instance::reloadDisplay,
-                0, 250, TimeUnit.MILLISECONDS);
-    }
 }

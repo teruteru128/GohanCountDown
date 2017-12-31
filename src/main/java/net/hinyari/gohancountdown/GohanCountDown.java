@@ -26,21 +26,24 @@ public class GohanCountDown {
     private JLabel label_nowtime;
     private JLabel label_yearsfrom;
 
-    public static GohanCountDown instance;
-    private static CountDownTimer countDownTimer;
+    private static final GohanCountDown instance = new GohanCountDown();
 
+    public static GohanCountDown getInstance()
+    {
+		return instance;
+    }
+
+    private static CountDownTimer countDownTimer;
 
     public static void main(String[] args)
     {
-        instance = new GohanCountDown();
-        countDownTimer = new CountDownTimer();
     }
 
-    public GohanCountDown()
+    private GohanCountDown()
     {
+        countDownTimer = new CountDownTimer(this);
         jFrame = new JFrame();
         jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        jFrame.setVisible(true);
         jFrame.setContentPane(panel1);
         jFrame.setSize(360, 510);
         jFrame.setResizable(false);
@@ -54,7 +57,7 @@ public class GohanCountDown {
                 jFrame.setTitle("GohanCountDown(" + e.getComponent().getWidth() + "×" + e.getComponent().getHeight() + ")");
             }
         });
-
+        jFrame.setVisible(true);
     }
 
 
