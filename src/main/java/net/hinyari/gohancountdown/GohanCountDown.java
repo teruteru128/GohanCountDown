@@ -8,19 +8,18 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
-import java.net.UnknownHostException;
 
 public class GohanCountDown
 {
     private JFrame jFrame;
 
     private JPanel panel1;
-    private JLabel label_unt2018ss;
-    private JLabel label_unt2018h;
-    private JLabel label_unt2018m;
-    private JLabel label_unt2018s;
-    private JLabel label_from2017ss;
     private JLabel label_unt2019ss;
+    private JLabel label_unt2019h;
+    private JLabel label_unt2019m;
+    private JLabel label_unt2019s;
+    private JLabel label_from2018ss;
+    private JLabel label_unt2020ss;
     private JLabel label_server;
     private JLabel label_appstatus;
     private JLabel label_nowtime;
@@ -62,34 +61,34 @@ public class GohanCountDown
     }
 
 
-    public JLabel getLabel_unt2018ss()
-    {
-        return label_unt2018ss;
-    }
-
-    public JLabel getLabel_unt2018h()
-    {
-        return label_unt2018h;
-    }
-
-    public JLabel getLabel_unt2018m()
-    {
-        return label_unt2018m;
-    }
-
-    public JLabel getLabel_unt2018s()
-    {
-        return label_unt2018s;
-    }
-
-    public JLabel getLabel_from2017ss()
-    {
-        return label_from2017ss;
-    }
-
     public JLabel getLabel_unt2019ss()
     {
         return label_unt2019ss;
+    }
+
+    public JLabel getLabel_unt2019h()
+    {
+        return label_unt2019h;
+    }
+
+    public JLabel getLabel_unt2019m()
+    {
+        return label_unt2019m;
+    }
+
+    public JLabel getLabel_unt2019s()
+    {
+        return label_unt2019s;
+    }
+
+    public JLabel getLabel_from2018ss()
+    {
+        return label_from2018ss;
+    }
+
+    public JLabel getLabel_unt2020ss()
+    {
+        return label_unt2020ss;
     }
 
     public JLabel getLabel_server()
@@ -134,20 +133,20 @@ public class GohanCountDown
     private void $$$setupUI$$$()
     {
         panel1 = new JPanel();
-        panel1.setLayout(new FormLayout("left:5dlu:noGrow,fill:max(d;4px):noGrow,fill:89px:grow,fill:max(d;4px):noGrow,fill:m:noGrow,left:4dlu:noGrow,fill:max(d;4px):noGrow,left:4dlu:noGrow,left:m:noGrow,left:4dlu:noGrow,fill:36px:noGrow,left:4dlu:noGrow,fill:max(d;4px):noGrow,left:4dlu:noGrow", "top:4dlu:noGrow,center:30px:noGrow,top:5dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:15px:noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:32px:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:5dlu:noGrow,center:m:grow,center:32px:noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:d:grow"));
+        panel1.setLayout(new FormLayout("left:5dlu:noGrow,fill:max(d;4px):noGrow,fill:89px:grow,fill:max(d;4px):noGrow,fill:m:noGrow,left:4dlu:noGrow,fill:max(d;4px):noGrow,left:4dlu:noGrow,left:m:noGrow,left:4dlu:noGrow,fill:36px:noGrow,left:4dlu:noGrow,fill:max(d;4px):noGrow,left:4dlu:noGrow", "top:4dlu:noGrow,center:30px:noGrow,top:5dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:15px:noGrow,top:4dlu:noGrow,center:16px:noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:32px:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:5dlu:noGrow,center:m:grow,center:32px:noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:d:grow"));
         final Spacer spacer1 = new Spacer();
         CellConstraints cc = new CellConstraints();
         panel1.add(spacer1, cc.xy(1, 2, CellConstraints.FILL, CellConstraints.DEFAULT));
         final Spacer spacer2 = new Spacer();
         panel1.add(spacer2, cc.xy(14, 2, CellConstraints.FILL, CellConstraints.DEFAULT));
-        label_unt2018s = new JLabel();
-        label_unt2018s.setEnabled(true);
-        Font label_unt2018sFont = this.$$$getFont$$$(null, -1, 28, label_unt2018s.getFont());
-        if (label_unt2018sFont != null)
-            label_unt2018s.setFont(label_unt2018sFont);
-        label_unt2018s.setHorizontalAlignment(4);
-        label_unt2018s.setText("00");
-        panel1.add(label_unt2018s, cc.xy(11, 18));
+        label_unt2019s = new JLabel();
+        label_unt2019s.setEnabled(true);
+        Font label_unt2019sFont = this.$$$getFont$$$(null, -1, 28, label_unt2019s.getFont());
+        if (label_unt2019sFont != null)
+            label_unt2019s.setFont(label_unt2019sFont);
+        label_unt2019s.setHorizontalAlignment(4);
+        label_unt2019s.setText("00");
+        panel1.add(label_unt2019s, cc.xy(11, 18));
         final JLabel label1 = new JLabel();
         Font label1Font = this.$$$getFont$$$(null, -1, 28, label1.getFont());
         if (label1Font != null)
@@ -160,20 +159,20 @@ public class GohanCountDown
             label2.setFont(label2Font);
         label2.setText("秒");
         panel1.add(label2, cc.xy(13, 16));
-        label_unt2018h = new JLabel();
-        Font label_unt2018hFont = this.$$$getFont$$$(null, -1, 28, label_unt2018h.getFont());
-        if (label_unt2018hFont != null)
-            label_unt2018h.setFont(label_unt2018hFont);
-        label_unt2018h.setHorizontalAlignment(4);
-        label_unt2018h.setText("0");
-        panel1.add(label_unt2018h, cc.xy(3, 18));
-        label_unt2018m = new JLabel();
-        Font label_unt2018mFont = this.$$$getFont$$$(null, -1, 28, label_unt2018m.getFont());
-        if (label_unt2018mFont != null)
-            label_unt2018m.setFont(label_unt2018mFont);
-        label_unt2018m.setHorizontalAlignment(4);
-        label_unt2018m.setText("00");
-        panel1.add(label_unt2018m, cc.xy(7, 18));
+        label_unt2019h = new JLabel();
+        Font label_unt2019hFont = this.$$$getFont$$$(null, -1, 28, label_unt2019h.getFont());
+        if (label_unt2019hFont != null)
+            label_unt2019h.setFont(label_unt2019hFont);
+        label_unt2019h.setHorizontalAlignment(4);
+        label_unt2019h.setText("0");
+        panel1.add(label_unt2019h, cc.xy(3, 18));
+        label_unt2019m = new JLabel();
+        Font label_unt2019mFont = this.$$$getFont$$$(null, -1, 28, label_unt2019m.getFont());
+        if (label_unt2019mFont != null)
+            label_unt2019m.setFont(label_unt2019mFont);
+        label_unt2019m.setHorizontalAlignment(4);
+        label_unt2019m.setText("00");
+        panel1.add(label_unt2019m, cc.xy(7, 18));
         final JLabel label3 = new JLabel();
         Font label3Font = this.$$$getFont$$$(null, -1, 28, label3.getFont());
         if (label3Font != null)
@@ -184,15 +183,15 @@ public class GohanCountDown
         Font label4Font = this.$$$getFont$$$(null, -1, 24, label4.getFont());
         if (label4Font != null)
             label4.setFont(label4Font);
-        label4.setText("2018年まであと");
+        label4.setText("2019年まであと");
         panel1.add(label4, cc.xyw(2, 15, 12));
-        label_unt2018ss = new JLabel();
-        Font label_unt2018ssFont = this.$$$getFont$$$(null, -1, 28, label_unt2018ss.getFont());
-        if (label_unt2018ssFont != null)
-            label_unt2018ss.setFont(label_unt2018ssFont);
-        label_unt2018ss.setHorizontalAlignment(4);
-        label_unt2018ss.setText("0");
-        panel1.add(label_unt2018ss, cc.xyw(3, 16, 9));
+        label_unt2019ss = new JLabel();
+        Font label_unt2019ssFont = this.$$$getFont$$$(null, -1, 28, label_unt2019ss.getFont());
+        if (label_unt2019ssFont != null)
+            label_unt2019ss.setFont(label_unt2019ssFont);
+        label_unt2019ss.setHorizontalAlignment(4);
+        label_unt2019ss.setText("0");
+        panel1.add(label_unt2019ss, cc.xyw(3, 16, 9));
         final JLabel label5 = new JLabel();
         Font label5Font = this.$$$getFont$$$(null, -1, 28, label5.getFont());
         if (label5Font != null)
@@ -204,22 +203,22 @@ public class GohanCountDown
         if (label6Font != null)
             label6.setFont(label6Font);
         label6.setHorizontalAlignment(0);
-        label6.setText("GohanCountDown for 2018");
+        label6.setText("GohanCountDown for 2019");
         panel1.add(label6, cc.xyw(3, 2, 11));
         label_yearsfrom = new JLabel();
         Font label_yearsfromFont = this.$$$getFont$$$(null, -1, 24, label_yearsfrom.getFont());
         if (label_yearsfromFont != null)
             label_yearsfrom.setFont(label_yearsfromFont);
-        label_yearsfrom.setText("2017年からの経過時間");
+        label_yearsfrom.setText("2018年からの経過時間");
         panel1.add(label_yearsfrom, cc.xyw(3, 21, 12));
-        label_from2017ss = new JLabel();
-        label_from2017ss.setEnabled(true);
-        Font label_from2017ssFont = this.$$$getFont$$$(null, -1, 28, label_from2017ss.getFont());
-        if (label_from2017ssFont != null)
-            label_from2017ss.setFont(label_from2017ssFont);
-        label_from2017ss.setHorizontalAlignment(4);
-        label_from2017ss.setText("0");
-        panel1.add(label_from2017ss, cc.xyw(3, 23, 9));
+        label_from2018ss = new JLabel();
+        label_from2018ss.setEnabled(true);
+        Font label_from2018ssFont = this.$$$getFont$$$(null, -1, 28, label_from2018ss.getFont());
+        if (label_from2018ssFont != null)
+            label_from2018ss.setFont(label_from2018ssFont);
+        label_from2018ss.setHorizontalAlignment(4);
+        label_from2018ss.setText("0");
+        panel1.add(label_from2018ss, cc.xyw(3, 23, 9));
         final JLabel label7 = new JLabel();
         Font label7Font = this.$$$getFont$$$(null, -1, 28, label7.getFont());
         if (label7Font != null)
@@ -232,15 +231,15 @@ public class GohanCountDown
         Font label8Font = this.$$$getFont$$$(null, -1, 24, label8.getFont());
         if (label8Font != null)
             label8.setFont(label8Font);
-        label8.setText("2019年まであと");
+        label8.setText("2020年まであと");
         panel1.add(label8, cc.xyw(3, 25, 11));
-        label_unt2019ss = new JLabel();
-        Font label_unt2019ssFont = this.$$$getFont$$$(null, -1, 28, label_unt2019ss.getFont());
-        if (label_unt2019ssFont != null)
-            label_unt2019ss.setFont(label_unt2019ssFont);
-        label_unt2019ss.setHorizontalAlignment(4);
-        label_unt2019ss.setText("0");
-        panel1.add(label_unt2019ss, cc.xyw(3, 27, 9));
+        label_unt2020ss = new JLabel();
+        Font label_unt2020ssFont = this.$$$getFont$$$(null, -1, 28, label_unt2020ss.getFont());
+        if (label_unt2020ssFont != null)
+            label_unt2020ss.setFont(label_unt2020ssFont);
+        label_unt2020ss.setHorizontalAlignment(4);
+        label_unt2020ss.setText("0");
+        panel1.add(label_unt2020ss, cc.xyw(3, 27, 9));
         final JLabel label9 = new JLabel();
         Font label9Font = this.$$$getFont$$$(null, -1, 28, label9.getFont());
         if (label9Font != null)
@@ -316,8 +315,4 @@ public class GohanCountDown
     {
         return panel1;
     }
-
-    // 以下IDEによる自動生成コードの為いじらない
-
-
 }

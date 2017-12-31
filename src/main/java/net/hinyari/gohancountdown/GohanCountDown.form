@@ -8,7 +8,7 @@
     <rowspec value="top:4dlu:noGrow"/>
     <rowspec value="center:15px:noGrow"/>
     <rowspec value="top:4dlu:noGrow"/>
-    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="center:16px:noGrow"/>
     <rowspec value="top:4dlu:noGrow"/>
     <rowspec value="center:max(d;4px):noGrow"/>
     <rowspec value="center:max(d;4px):noGrow"/>
@@ -45,7 +45,7 @@
     <colspec value="fill:max(d;4px):noGrow"/>
     <colspec value="left:4dlu:noGrow"/>
     <constraints>
-      <xy x="33" y="12" width="341" height="495"/>
+      <xy x="33" y="12" width="341" height="496"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -62,7 +62,7 @@
           <forms defaultalign-horz="false"/>
         </constraints>
       </hspacer>
-      <component id="38e90" class="javax.swing.JLabel" binding="label_unt2018s">
+      <component id="38e90" class="javax.swing.JLabel" binding="label_unt2019s">
         <constraints>
           <grid row="17" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
@@ -94,7 +94,7 @@
           <text value="秒"/>
         </properties>
       </component>
-      <component id="d1cf4" class="javax.swing.JLabel" binding="label_unt2018h">
+      <component id="d1cf4" class="javax.swing.JLabel" binding="label_unt2019h">
         <constraints>
           <grid row="17" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
@@ -105,7 +105,7 @@
           <text value="0"/>
         </properties>
       </component>
-      <component id="6d532" class="javax.swing.JLabel" binding="label_unt2018m">
+      <component id="6d532" class="javax.swing.JLabel" binding="label_unt2019m">
         <constraints>
           <grid row="17" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
@@ -133,10 +133,10 @@
         </constraints>
         <properties>
           <font size="24"/>
-          <text value="2018年まであと"/>
+          <text value="2019年まであと"/>
         </properties>
       </component>
-      <component id="91d5a" class="javax.swing.JLabel" binding="label_unt2018ss">
+      <component id="91d5a" class="javax.swing.JLabel" binding="label_unt2019ss">
         <constraints>
           <grid row="15" column="2" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
@@ -165,7 +165,7 @@
         <properties>
           <font size="24"/>
           <horizontalAlignment value="0"/>
-          <text value="GohanCountDown for 2018"/>
+          <text value="GohanCountDown for 2019"/>
         </properties>
       </component>
       <component id="b385c" class="javax.swing.JLabel" binding="label_yearsfrom">
@@ -175,10 +175,10 @@
         </constraints>
         <properties>
           <font size="24"/>
-          <text value="2017年からの経過時間"/>
+          <text value="2018年からの経過時間"/>
         </properties>
       </component>
-      <component id="ebd74" class="javax.swing.JLabel" binding="label_from2017ss">
+      <component id="ebd74" class="javax.swing.JLabel" binding="label_from2018ss">
         <constraints>
           <grid row="22" column="2" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
@@ -214,10 +214,10 @@
         </constraints>
         <properties>
           <font size="24"/>
-          <text value="2019年まであと"/>
+          <text value="2020年まであと"/>
         </properties>
       </component>
-      <component id="f973b" class="javax.swing.JLabel" binding="label_unt2019ss">
+      <component id="f973b" class="javax.swing.JLabel" binding="label_unt2020ss">
         <constraints>
           <grid row="26" column="2" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>

@@ -46,7 +46,7 @@ public class CountDownTimer
             long systemtime = System.currentTimeMillis();
             // 誤差
             long errortime = rawtime - systemtime;
-            main.getLabel_errortime().setText(String.valueOf(errortime));
+            main.getLabel_errortime().setText(String.valueOf(errortime) + "ms");
             log("systemtime " + systemtime);
             log("ntptime " + rawtime);
             log("errortime " + errortime);
@@ -114,37 +114,37 @@ public class CountDownTimer
         main.getLabel_nowtime().setText(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss").format(ldt));
 
         // LocalDateTimeを取得する
-        Instant firstDayof2017 = LocalDateTime.parse("2017-01-01T00:00:00", DateTimeFormatter.ISO_DATE_TIME)
-                .toInstant(ZoneId.systemDefault().getRules().getOffset(Instant.EPOCH));
         Instant firstDayof2018 = LocalDateTime.parse("2018-01-01T00:00:00", DateTimeFormatter.ISO_DATE_TIME)
                 .toInstant(ZoneId.systemDefault().getRules().getOffset(Instant.EPOCH));
         Instant firstDayof2019 = LocalDateTime.parse("2019-01-01T00:00:00", DateTimeFormatter.ISO_DATE_TIME)
                 .toInstant(ZoneId.systemDefault().getRules().getOffset(Instant.EPOCH));
+        Instant firstDayof2020 = LocalDateTime.parse("2020-01-01T00:00:00", DateTimeFormatter.ISO_DATE_TIME)
+                .toInstant(ZoneId.systemDefault().getRules().getOffset(Instant.EPOCH));
 
         // 時刻の差をそれぞれ取得する
-        Duration durationunt2018 = Duration.between(nowTimeInstance, firstDayof2018);
-        Duration durationfrom2017 = Duration.between(firstDayof2017, nowTimeInstance);
-        Duration durationfrom2018 = Duration.between(firstDayof2018, nowTimeInstance);
         Duration durationunt2019 = Duration.between(nowTimeInstance, firstDayof2019);
-        long lunt2018seconds = durationunt2018.getSeconds();
+        Duration durationfrom2019 = Duration.between(firstDayof2019, nowTimeInstance);
+        Duration durationfrom2018 = Duration.between(firstDayof2018, nowTimeInstance);
+        Duration durationunt2020 = Duration.between(nowTimeInstance, firstDayof2020);
+        long lunt2019seconds = durationunt2019.getSeconds();
 
         // JLabelに文字を置く
-        main.getLabel_unt2018ss().setText(lunt2018seconds <= 0 ? "HAPPY NEW YEAR" : String.valueOf(lunt2018seconds));
+        main.getLabel_unt2019ss().setText(lunt2019seconds <= 0 ? "HAPPY NEW YEAR" : String.valueOf(lunt2019seconds));
 
         // 2018年内
-        if (lunt2018seconds >= 0) {
-            main.getLabel_unt2018h().setText(String.format("%02d", lunt2018seconds / 3600));
-            main.getLabel_unt2018m().setText(String.format("%02d", (lunt2018seconds / 60) % 60));
-            main.getLabel_unt2018s().setText(String.format("%02d", lunt2018seconds % 60));
-            main.getLabel_from2017ss().setText(String.valueOf(durationfrom2017.getSeconds()));
-        } else {    // 2018年後
-            main.getLabel_unt2018h().setText("00");
-            main.getLabel_unt2018m().setText("00");
-            main.getLabel_unt2018s().setText("00");
-            main.getLabel_yearsfrom().setText("2018年からの経過時間");
-            main.getLabel_from2017ss().setText(String.valueOf(durationfrom2018.getSeconds()));
+        if (lunt2019seconds >= 0) {
+            main.getLabel_unt2019h().setText(String.format("%02d", lunt2019seconds / 3600));
+            main.getLabel_unt2019m().setText(String.format("%02d", (lunt2019seconds / 60) % 60));
+            main.getLabel_unt2019s().setText(String.format("%02d", lunt2019seconds % 60));
+            main.getLabel_from2018ss().setText(String.valueOf(durationfrom2018.getSeconds()));
+        } else {    // 2019年後
+            main.getLabel_unt2019h().setText("00");
+            main.getLabel_unt2019m().setText("00");
+            main.getLabel_unt2019s().setText("00");
+            main.getLabel_yearsfrom().setText("2019年からの経過時間");
+            main.getLabel_from2018ss().setText(String.valueOf(durationfrom2019.getSeconds()));
         }
-        main.getLabel_unt2019ss().setText(String.valueOf(durationunt2019.getSeconds()));
+        main.getLabel_unt2020ss().setText(String.valueOf(durationunt2020.getSeconds()));
     }
 
     public long getRawtime()
