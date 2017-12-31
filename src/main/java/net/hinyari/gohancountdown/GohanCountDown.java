@@ -6,6 +6,8 @@ import com.jgoodies.forms.layout.FormLayout;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 
@@ -26,22 +28,24 @@ public class GohanCountDown extends JFrame
     private JLabel label_yearsfrom;
 
     public static GohanCountDown instance;
+    private static CountDownTimer countDownTimer;
 
 
     public static void main(String[] args)
     {
         instance = new GohanCountDown();
-        CountDownTimer countDownTimer = new CountDownTimer();
+        countDownTimer = new CountDownTimer();
     }
 
     public GohanCountDown()
     {
         jFrame = this;
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setVisible(true);
-        setContentPane(panel1);
-        setSize(360, 510);
-        setResizable(false);
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        this.setVisible(true);
+        this.setContentPane(panel1);
+        this.setSize(360, 510);
+        this.setResizable(false);
+        this.setAlwaysOnTop(true);
         addComponentListener(new ComponentAdapter()
         {
             @Override
@@ -127,7 +131,7 @@ public class GohanCountDown extends JFrame
     private void $$$setupUI$$$()
     {
         panel1 = new JPanel();
-        panel1.setLayout(new FormLayout("left:5dlu:noGrow,fill:max(d;4px):noGrow,fill:89px:grow,fill:max(d;4px):noGrow,fill:m:noGrow,left:4dlu:noGrow,fill:max(d;4px):noGrow,left:4dlu:noGrow,left:m:noGrow,left:4dlu:noGrow,fill:36px:noGrow,left:4dlu:noGrow,fill:max(d;4px):noGrow,left:4dlu:noGrow", "top:4dlu:noGrow,center:30px:noGrow,top:5dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:32px:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,top:4dlu:noGrow,center:m:grow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:d:grow"));
+        panel1.setLayout(new FormLayout("left:5dlu:noGrow,fill:max(d;4px):noGrow,fill:89px:grow,fill:max(d;4px):noGrow,fill:m:noGrow,left:4dlu:noGrow,fill:max(d;4px):noGrow,left:4dlu:noGrow,left:m:noGrow,left:4dlu:noGrow,fill:36px:noGrow,left:4dlu:noGrow,fill:max(d;4px):noGrow,left:4dlu:noGrow", "top:4dlu:noGrow,center:30px:noGrow,top:5dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:32px:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:5dlu:noGrow,center:m:grow,center:32px:noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:d:grow"));
         final Spacer spacer1 = new Spacer();
         CellConstraints cc = new CellConstraints();
         panel1.add(spacer1, cc.xy(1, 2, CellConstraints.FILL, CellConstraints.DEFAULT));
@@ -204,7 +208,7 @@ public class GohanCountDown extends JFrame
         if (label_yearsfromFont != null)
             label_yearsfrom.setFont(label_yearsfromFont);
         label_yearsfrom.setText("2017年からの経過時間");
-        panel1.add(label_yearsfrom, cc.xyw(3, 19, 12));
+        panel1.add(label_yearsfrom, cc.xyw(3, 18, 12));
         label_from2017ss = new JLabel();
         label_from2017ss.setEnabled(true);
         Font label_from2017ssFont = this.$$$getFont$$$(null, -1, 28, label_from2017ss.getFont());
@@ -212,34 +216,34 @@ public class GohanCountDown extends JFrame
             label_from2017ss.setFont(label_from2017ssFont);
         label_from2017ss.setHorizontalAlignment(4);
         label_from2017ss.setText("0");
-        panel1.add(label_from2017ss, cc.xyw(3, 21, 9));
+        panel1.add(label_from2017ss, cc.xyw(3, 20, 9));
         final JLabel label7 = new JLabel();
         Font label7Font = this.$$$getFont$$$(null, -1, 28, label7.getFont());
         if (label7Font != null)
             label7.setFont(label7Font);
         label7.setText("秒");
-        panel1.add(label7, cc.xy(13, 21));
+        panel1.add(label7, cc.xy(13, 20));
         final JSeparator separator1 = new JSeparator();
-        panel1.add(separator1, cc.xyw(3, 18, 11, CellConstraints.FILL, CellConstraints.FILL));
+        panel1.add(separator1, cc.xyw(3, 17, 11, CellConstraints.FILL, CellConstraints.FILL));
         final JLabel label8 = new JLabel();
         Font label8Font = this.$$$getFont$$$(null, -1, 24, label8.getFont());
         if (label8Font != null)
             label8.setFont(label8Font);
         label8.setText("2019年まであと");
-        panel1.add(label8, cc.xyw(3, 23, 11));
+        panel1.add(label8, cc.xyw(3, 22, 11));
         label_unt2019ss = new JLabel();
         Font label_unt2019ssFont = this.$$$getFont$$$(null, -1, 28, label_unt2019ss.getFont());
         if (label_unt2019ssFont != null)
             label_unt2019ss.setFont(label_unt2019ssFont);
         label_unt2019ss.setHorizontalAlignment(4);
         label_unt2019ss.setText("0");
-        panel1.add(label_unt2019ss, cc.xyw(3, 25, 9));
+        panel1.add(label_unt2019ss, cc.xyw(3, 24, 9));
         final JLabel label9 = new JLabel();
         Font label9Font = this.$$$getFont$$$(null, -1, 28, label9.getFont());
         if (label9Font != null)
             label9.setFont(label9Font);
         label9.setText("秒");
-        panel1.add(label9, cc.xy(13, 25));
+        panel1.add(label9, cc.xy(13, 24));
         final JLabel label10 = new JLabel();
         Font label10Font = this.$$$getFont$$$(null, -1, 24, label10.getFont());
         if (label10Font != null)
@@ -270,7 +274,7 @@ public class GohanCountDown extends JFrame
         label12.setText("接続状況");
         panel1.add(label12, cc.xy(3, 6));
         final Spacer spacer3 = new Spacer();
-        panel1.add(spacer3, cc.xy(5, 27, CellConstraints.DEFAULT, CellConstraints.FILL));
+        panel1.add(spacer3, cc.xy(5, 26, CellConstraints.DEFAULT, CellConstraints.FILL));
     }
 
     /**
