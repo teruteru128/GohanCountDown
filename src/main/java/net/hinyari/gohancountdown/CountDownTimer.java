@@ -28,7 +28,7 @@ public class CountDownTimer
     public CountDownTimer()
     {
         // メインクラスのインスタンス読み込み
-        main = GohanCountDown.instance;
+        main = GohanCountDown.getInstance();
         try {
             ntpAddress = InetAddress.getByName("ntp.nict.jp");
             countDown = new CountDown(this);

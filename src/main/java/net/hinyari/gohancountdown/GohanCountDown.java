@@ -27,17 +27,21 @@ public class GohanCountDown extends JFrame
     private JLabel label_nowtime;
     private JLabel label_yearsfrom;
 
-    public static GohanCountDown instance;
-    private static CountDownTimer countDownTimer;
+    private static final GohanCountDown instance = new GohanCountDown();
 
+    public static GohanCountDown getInstance()
+    {
+		return instance;
+    }
+
+    private static CountDownTimer countDownTimer;
 
     public static void main(String[] args)
     {
-        instance = new GohanCountDown();
         countDownTimer = new CountDownTimer();
     }
 
-    public GohanCountDown()
+    private GohanCountDown()
     {
         jFrame = this;
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
