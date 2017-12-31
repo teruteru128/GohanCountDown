@@ -28,10 +28,10 @@ public class CountDownTimer
 
     private CountDown countDown;
 
-    public CountDownTimer()
+    public CountDownTimer(GohanCountDown main)
     {
         // メインクラスのインスタンス読み込み
-        main = GohanCountDown.getInstance();
+        this.main = main;
         try {
             ntpAddress = InetAddress.getByName("ntp.nict.jp");
             countDown = new CountDown(this);

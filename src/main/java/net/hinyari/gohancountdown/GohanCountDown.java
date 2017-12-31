@@ -37,11 +37,11 @@ public class GohanCountDown {
 
     public static void main(String[] args)
     {
-        countDownTimer = new CountDownTimer();
     }
 
     private GohanCountDown()
     {
+        countDownTimer = new CountDownTimer(this);
         jFrame = new JFrame();
         jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         jFrame.setVisible(true);
