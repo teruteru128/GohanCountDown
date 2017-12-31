@@ -3,20 +3,23 @@ package net.hinyari.gohancountdown;
 import org.apache.commons.net.ntp.NTPUDPClient;
 import org.apache.commons.net.ntp.TimeInfo;
 
-import javax.swing.*;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
-import java.time.*;
+import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class CountDownTimer
 {
     private GohanCountDown main;
-    
+
     private long rawtime;
     private Instant ntpTimeInstance;
     private NTPUDPClient ntpClient;
@@ -24,7 +27,7 @@ public class CountDownTimer
     private InetAddress ntpAddress;
 
     private CountDown countDown;
-    
+
     public CountDownTimer()
     {
         // メインクラスのインスタンス読み込み
@@ -35,7 +38,7 @@ public class CountDownTimer
             ntpClient = new NTPUDPClient();
             ntpClient.open();
             main.getLabel_appstatus().setText("正常");
-            
+
             countDown.run();
         } catch (UnknownHostException e) {
             main.getLabel_server().setText("不明なホスト名");
@@ -105,87 +108,23 @@ public class CountDownTimer
             e.printStackTrace();
         }
     }
-        
-
-        /* 2017年のときのウンコード
-        public String getTime()
-        {
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-            try {
-                // NTPクライアントを作成
-                NTPUDPClient ntpClient = new NTPUDPClient();
-                ntpClient.open();
-
-                // ntp.nict.jpに接続して時刻の情報を取得する。
-                TimeInfo timeInfo = ntpClient.getTime(InetAddress.getByName("ntp.nict.jp"));
-                // サーバアドレスを表示
-
-                // 接続を閉じる
-                ntpClient.close();
-
-                // Date型にぶち込む
-                Date now = new Date(timeInfo.getReturnTime());
-
-                // 型にはめて先頭の4字の西暦を取得
-                thisyear = String.valueOf(sdf.format(now).substring(0, 4));
-                // 取得した値に1を足して次の年を取得
-                nextyear = String.valueOf(Integer.valueOf(thisyear) + 1);
-
-                // Date型にぶち込む
-                Date year = sdf.parse(nextyear + "/01/01 00:00:00");
-                Date thisyear = sdf.parse(GohanCountDown.thisyear + "/01/01 00:00:00");
-
-                // 時刻の差を求める
-                long timeDiff = ((year != null ? year.getTime() : 0) - now.getTime()) / 1000;
-                long timeDifffrom = (now.getTime() - (thisyear != null ? thisyear.getTime() : 0)) / 1000;
-
-                String displayDiff = (timeDiff < 0) ? "0" : String.valueOf(timeDiff);
-                until_second.setText(displayDiff);
-                from_second.setText(String.valueOf(timeDifffrom));
-                until_year.setText(nextyear + "年まで 後");
-                from_year.setText(GohanCountDown.thisyear + "年から");
-
-                return sdf.format(new Date(timeInfo.getReturnTime()));
-
-            } catch (UnknownHostException e) {
-                until_second.setText("不正なホスト名");
-                from_second.setText("不正なホスト名");
-            } catch (ParseException | IOException e) {
-                e.printStackTrace();
-            }
-            return null;
-        }
-        */
 
     public long getRawtime()
     {
         return rawtime;
     }
-    
+
 }
 
-class CountDown extends Thread  {
-    
-    private Timer timer;
-    private CountDownTimer instance;
-    
-    CountDown(CountDownTimer instance) {
-        timer = new Timer();
-        this.instance = instance;
-    }
-    
-    @Override
-    public void run()
+class CountDown extends Thread
+{
+
+    private ScheduledExecutorService service;
+
+    CountDown(CountDownTimer instance)
     {
-        timer.schedule(timerTask, 0L, 500L);
+        service = Executors.newSingleThreadScheduledExecutor();
+        service.scheduleAtFixedRate(instance::reloadDisplay,
+                0, 250, TimeUnit.MILLISECONDS);
     }
-    
-    private TimerTask timerTask = new TimerTask()
-    {
-        @Override
-        public void run()
-        {
-            instance.reloadDisplay();
-        }
-    };
 }
