@@ -57,7 +57,7 @@ public class GohanCountDown
         jFrame = new JFrame();
         jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         jFrame.setContentPane(panel1);
-        jFrame.setSize(400, 560);
+        jFrame.setSize(380, 560);
         jFrame.setResizable(false);
         jFrame.setAlwaysOnTop(true);
         //this.setUndecorated(true);    挙動が不明だが指摘されたので入れておく
@@ -158,7 +158,7 @@ public class GohanCountDown
     private void $$$setupUI$$$()
     {
         panel1 = new JPanel();
-        panel1.setLayout(new FormLayout("left:5dlu:noGrow,left:4dlu:noGrow,fill:max(d;4px):noGrow,left:4dlu:noGrow,fill:max(m;4px):noGrow,fill:max(d;4px):noGrow,fill:41px:grow,fill:max(d;4px):noGrow,fill:m:noGrow,left:4dlu:noGrow,fill:max(d;4px):noGrow,left:4dlu:noGrow,left:m:noGrow,left:4dlu:noGrow,fill:36px:noGrow,left:4dlu:noGrow,fill:max(d;4px):noGrow,left:4dlu:noGrow", "top:4dlu:noGrow,center:30px:noGrow,top:5dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:15px:noGrow,top:4dlu:noGrow,center:16px:noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:29px:noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,center:39px:noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:5dlu:noGrow,center:m:grow,center:32px:noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:d:grow"));
+        panel1.setLayout(new FormLayout("left:5dlu:noGrow,left:4dlu:noGrow,fill:max(d;4px):noGrow,left:4dlu:noGrow,fill:max(m;4px):noGrow,fill:max(d;4px):noGrow,fill:m:noGrow,fill:max(d;4px):noGrow,fill:m:noGrow,left:4dlu:noGrow,fill:max(d;4px):noGrow,left:4dlu:noGrow,left:m:noGrow,left:4dlu:noGrow,fill:36px:noGrow,left:4dlu:noGrow,fill:max(d;4px):noGrow,left:4dlu:noGrow", "top:4dlu:noGrow,center:30px:noGrow,top:5dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:15px:noGrow,top:4dlu:noGrow,center:16px:noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:29px:noGrow,top:4dlu:noGrow,center:39px:noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:5dlu:noGrow,center:m:grow,center:32px:noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:d:grow"));
         final Spacer spacer1 = new Spacer();
         CellConstraints cc = new CellConstraints();
         panel1.add(spacer1, cc.xy(1, 2, CellConstraints.FILL, CellConstraints.DEFAULT));
@@ -171,74 +171,74 @@ public class GohanCountDown
             label_unt2019s.setFont(label_unt2019sFont);
         label_unt2019s.setHorizontalAlignment(4);
         label_unt2019s.setText("00");
-        panel1.add(label_unt2019s, cc.xy(15, 20));
+        panel1.add(label_unt2019s, cc.xy(15, 19));
         final JLabel label1 = new JLabel();
         Font label1Font = this.$$$getFont$$$(null, -1, 28, label1.getFont());
         if (label1Font != null)
             label1.setFont(label1Font);
         label1.setText("秒");
-        panel1.add(label1, cc.xy(17, 20));
+        panel1.add(label1, cc.xy(17, 19));
         final JLabel label2 = new JLabel();
         Font label2Font = this.$$$getFont$$$(null, -1, 28, label2.getFont());
         if (label2Font != null)
             label2.setFont(label2Font);
         label2.setText("秒");
-        panel1.add(label2, cc.xy(17, 18));
+        panel1.add(label2, cc.xy(17, 17));
         label_unt2019h = new JLabel();
         Font label_unt2019hFont = this.$$$getFont$$$(null, -1, 28, label_unt2019h.getFont());
         if (label_unt2019hFont != null)
             label_unt2019h.setFont(label_unt2019hFont);
         label_unt2019h.setHorizontalAlignment(4);
         label_unt2019h.setText("00");
-        panel1.add(label_unt2019h, cc.xy(7, 20));
+        panel1.add(label_unt2019h, cc.xy(7, 19));
         label_unt2019m = new JLabel();
         Font label_unt2019mFont = this.$$$getFont$$$(null, -1, 28, label_unt2019m.getFont());
         if (label_unt2019mFont != null)
             label_unt2019m.setFont(label_unt2019mFont);
         label_unt2019m.setHorizontalAlignment(4);
         label_unt2019m.setText("00");
-        panel1.add(label_unt2019m, cc.xy(11, 20));
+        panel1.add(label_unt2019m, cc.xy(11, 19));
         final JLabel label3 = new JLabel();
         Font label3Font = this.$$$getFont$$$(null, -1, 28, label3.getFont());
         if (label3Font != null)
             label3.setFont(label3Font);
         label3.setText("分");
-        panel1.add(label3, cc.xy(13, 20));
+        panel1.add(label3, cc.xy(13, 19));
         label_unt2019ss = new JLabel();
         Font label_unt2019ssFont = this.$$$getFont$$$(null, -1, 28, label_unt2019ss.getFont());
         if (label_unt2019ssFont != null)
             label_unt2019ss.setFont(label_unt2019ssFont);
         label_unt2019ss.setHorizontalAlignment(4);
         label_unt2019ss.setText("0");
-        panel1.add(label_unt2019ss, cc.xyw(3, 18, 13));
+        panel1.add(label_unt2019ss, cc.xyw(3, 17, 13));
         final JLabel label4 = new JLabel();
         Font label4Font = this.$$$getFont$$$(null, -1, 28, label4.getFont());
         if (label4Font != null)
             label4.setFont(label4Font);
         label4.setText("時間");
-        panel1.add(label4, cc.xy(9, 20));
+        panel1.add(label4, cc.xy(9, 19));
         final JLabel label5 = new JLabel();
-        Font label5Font = this.$$$getFont$$$(null, Font.BOLD, 24, label5.getFont());
+        Font label5Font = this.$$$getFont$$$(null, Font.BOLD, 22, label5.getFont());
         if (label5Font != null)
             label5.setFont(label5Font);
         label5.setHorizontalAlignment(0);
         label5.setText("GohanCountDown for 2019");
         panel1.add(label5, cc.xyw(3, 2, 15));
         final JSeparator separator1 = new JSeparator();
-        panel1.add(separator1, cc.xyw(3, 22, 15, CellConstraints.FILL, CellConstraints.FILL));
+        panel1.add(separator1, cc.xyw(3, 21, 15, CellConstraints.FILL, CellConstraints.FILL));
         label_unt2020ss = new JLabel();
         Font label_unt2020ssFont = this.$$$getFont$$$(null, -1, 28, label_unt2020ss.getFont());
         if (label_unt2020ssFont != null)
             label_unt2020ss.setFont(label_unt2020ssFont);
         label_unt2020ss.setHorizontalAlignment(4);
         label_unt2020ss.setText("0");
-        panel1.add(label_unt2020ss, cc.xyw(3, 29, 13));
+        panel1.add(label_unt2020ss, cc.xyw(3, 28, 13));
         final JLabel label6 = new JLabel();
         Font label6Font = this.$$$getFont$$$(null, -1, 28, label6.getFont());
         if (label6Font != null)
             label6.setFont(label6Font);
         label6.setText("秒");
-        panel1.add(label6, cc.xy(17, 29));
+        panel1.add(label6, cc.xy(17, 28));
         final JLabel label7 = new JLabel();
         Font label7Font = this.$$$getFont$$$(null, -1, 24, label7.getFont());
         if (label7Font != null)
@@ -252,7 +252,7 @@ public class GohanCountDown
         label_appstatus.setText("");
         panel1.add(label_appstatus, cc.xyw(9, 6, 9));
         final Spacer spacer3 = new Spacer();
-        panel1.add(spacer3, cc.xy(9, 33, CellConstraints.DEFAULT, CellConstraints.FILL));
+        panel1.add(spacer3, cc.xy(9, 32, CellConstraints.DEFAULT, CellConstraints.FILL));
         label_errortime = new JLabel();
         label_errortime.setText("");
         panel1.add(label_errortime, cc.xyw(9, 8, 9));
@@ -261,7 +261,7 @@ public class GohanCountDown
         if (label8Font != null)
             label8.setFont(label8Font);
         label8.setText("日");
-        panel1.add(label8, cc.xy(5, 20));
+        panel1.add(label8, cc.xy(5, 19));
         final JLabel label9 = new JLabel();
         Font label9Font = this.$$$getFont$$$(null, -1, 24, label9.getFont());
         if (label9Font != null)
@@ -291,13 +291,13 @@ public class GohanCountDown
         if (label_yearsfromFont != null)
             label_yearsfrom.setFont(label_yearsfromFont);
         label_yearsfrom.setText("2018年からの経過時間");
-        panel1.add(label_yearsfrom, cc.xyw(3, 23, 14));
+        panel1.add(label_yearsfrom, cc.xyw(3, 22, 14));
         final JLabel label12 = new JLabel();
         Font label12Font = this.$$$getFont$$$(null, -1, 28, label12.getFont());
         if (label12Font != null)
             label12.setFont(label12Font);
         label12.setText("秒");
-        panel1.add(label12, cc.xy(17, 25));
+        panel1.add(label12, cc.xy(17, 24));
         label_from2018ss = new JLabel();
         label_from2018ss.setEnabled(true);
         Font label_from2018ssFont = this.$$$getFont$$$(null, -1, 28, label_from2018ss.getFont());
@@ -305,13 +305,13 @@ public class GohanCountDown
             label_from2018ss.setFont(label_from2018ssFont);
         label_from2018ss.setHorizontalAlignment(4);
         label_from2018ss.setText("0");
-        panel1.add(label_from2018ss, cc.xyw(3, 25, 13));
+        panel1.add(label_from2018ss, cc.xyw(3, 24, 13));
         final JLabel label13 = new JLabel();
         Font label13Font = this.$$$getFont$$$(null, -1, 24, label13.getFont());
         if (label13Font != null)
             label13.setFont(label13Font);
         label13.setText("2020年まであと");
-        panel1.add(label13, cc.xyw(3, 27, 11));
+        panel1.add(label13, cc.xyw(3, 26, 11));
         final JLabel label14 = new JLabel();
         label14.setHorizontalAlignment(4);
         label14.setText("接続中のサーバ");
@@ -322,20 +322,20 @@ public class GohanCountDown
             label_untdays.setFont(label_untdaysFont);
         label_untdays.setHorizontalAlignment(4);
         label_untdays.setText("000");
-        panel1.add(label_untdays, cc.xy(3, 20));
+        panel1.add(label_untdays, cc.xy(3, 19));
         check_isresizeable = new JCheckBox();
         Font check_isresizeableFont = this.$$$getFont$$$(null, -1, 14, check_isresizeable.getFont());
         if (check_isresizeableFont != null)
             check_isresizeable.setFont(check_isresizeableFont);
         check_isresizeable.setText("画面サイズの変更");
-        panel1.add(check_isresizeable, cc.xyw(3, 31, 7));
+        panel1.add(check_isresizeable, cc.xyw(3, 30, 7));
         check_frontdisplayed = new JCheckBox();
         Font check_frontdisplayedFont = this.$$$getFont$$$(null, -1, 14, check_frontdisplayed.getFont());
         if (check_frontdisplayedFont != null)
             check_frontdisplayed.setFont(check_frontdisplayedFont);
         check_frontdisplayed.setSelected(true);
         check_frontdisplayed.setText("最前面に表示する");
-        panel1.add(check_frontdisplayed, cc.xyw(11, 31, 7));
+        panel1.add(check_frontdisplayed, cc.xyw(11, 30, 7));
     }
 
     /**

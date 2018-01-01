@@ -17,7 +17,6 @@
     <rowspec value="top:4dlu:noGrow"/>
     <rowspec value="center:29px:noGrow"/>
     <rowspec value="top:4dlu:noGrow"/>
-    <rowspec value="center:max(d;4px):noGrow"/>
     <rowspec value="center:39px:noGrow"/>
     <rowspec value="top:4dlu:noGrow"/>
     <rowspec value="center:max(d;4px):noGrow"/>
@@ -40,7 +39,7 @@
     <colspec value="left:4dlu:noGrow"/>
     <colspec value="fill:max(m;4px):noGrow"/>
     <colspec value="fill:max(d;4px):noGrow"/>
-    <colspec value="fill:41px:grow"/>
+    <colspec value="fill:m:noGrow"/>
     <colspec value="fill:max(d;4px):noGrow"/>
     <colspec value="fill:m:noGrow"/>
     <colspec value="left:4dlu:noGrow"/>
@@ -53,7 +52,7 @@
     <colspec value="fill:max(d;4px):noGrow"/>
     <colspec value="left:4dlu:noGrow"/>
     <constraints>
-      <xy x="33" y="12" width="376" height="538"/>
+      <xy x="33" y="12" width="380" height="538"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -72,7 +71,7 @@
       </hspacer>
       <component id="38e90" class="javax.swing.JLabel" binding="label_unt2019s">
         <constraints>
-          <grid row="19" column="14" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="18" column="14" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -84,7 +83,7 @@
       </component>
       <component id="d37b3" class="javax.swing.JLabel">
         <constraints>
-          <grid row="19" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="18" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -94,7 +93,7 @@
       </component>
       <component id="f5166" class="javax.swing.JLabel">
         <constraints>
-          <grid row="17" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="16" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -104,7 +103,7 @@
       </component>
       <component id="d1cf4" class="javax.swing.JLabel" binding="label_unt2019h">
         <constraints>
-          <grid row="19" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="18" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -115,7 +114,7 @@
       </component>
       <component id="6d532" class="javax.swing.JLabel" binding="label_unt2019m">
         <constraints>
-          <grid row="19" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="18" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -126,7 +125,7 @@
       </component>
       <component id="8b058" class="javax.swing.JLabel">
         <constraints>
-          <grid row="19" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="18" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -136,7 +135,7 @@
       </component>
       <component id="91d5a" class="javax.swing.JLabel" binding="label_unt2019ss">
         <constraints>
-          <grid row="17" column="2" row-span="1" col-span="13" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="16" column="2" row-span="1" col-span="13" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -147,7 +146,7 @@
       </component>
       <component id="1398b" class="javax.swing.JLabel">
         <constraints>
-          <grid row="19" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="18" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -161,21 +160,21 @@
           <forms/>
         </constraints>
         <properties>
-          <font size="24" style="1"/>
+          <font size="22" style="1"/>
           <horizontalAlignment value="0"/>
           <text value="GohanCountDown for 2019"/>
         </properties>
       </component>
       <component id="25786" class="javax.swing.JSeparator">
         <constraints>
-          <grid row="21" column="2" row-span="1" col-span="15" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="20" column="2" row-span="1" col-span="15" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <forms defaultalign-horz="false" defaultalign-vert="false"/>
         </constraints>
         <properties/>
       </component>
       <component id="f973b" class="javax.swing.JLabel" binding="label_unt2020ss">
         <constraints>
-          <grid row="28" column="2" row-span="1" col-span="13" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="27" column="2" row-span="1" col-span="13" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -186,7 +185,7 @@
       </component>
       <component id="88137" class="javax.swing.JLabel">
         <constraints>
-          <grid row="28" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="27" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -224,7 +223,7 @@
       </component>
       <vspacer id="f4140">
         <constraints>
-          <grid row="32" column="8" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="31" column="8" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <forms defaultalign-vert="false"/>
         </constraints>
       </vspacer>
@@ -239,7 +238,7 @@
       </component>
       <component id="d61ca" class="javax.swing.JLabel">
         <constraints>
-          <grid row="19" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="18" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -293,7 +292,7 @@
       </component>
       <component id="b385c" class="javax.swing.JLabel" binding="label_yearsfrom">
         <constraints>
-          <grid row="22" column="2" row-span="1" col-span="14" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="21" column="2" row-span="1" col-span="14" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -303,7 +302,7 @@
       </component>
       <component id="db2e" class="javax.swing.JLabel">
         <constraints>
-          <grid row="24" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="23" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -313,7 +312,7 @@
       </component>
       <component id="ebd74" class="javax.swing.JLabel" binding="label_from2018ss">
         <constraints>
-          <grid row="24" column="2" row-span="1" col-span="13" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="23" column="2" row-span="1" col-span="13" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -325,7 +324,7 @@
       </component>
       <component id="1d015" class="javax.swing.JLabel">
         <constraints>
-          <grid row="26" column="2" row-span="1" col-span="11" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="25" column="2" row-span="1" col-span="11" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -345,7 +344,7 @@
       </component>
       <component id="1d42" class="javax.swing.JLabel" binding="label_untdays">
         <constraints>
-          <grid row="19" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="18" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -356,7 +355,7 @@
       </component>
       <component id="d5f83" class="javax.swing.JCheckBox" binding="check_isresizeable">
         <constraints>
-          <grid row="30" column="2" row-span="1" col-span="7" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="29" column="2" row-span="1" col-span="7" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
@@ -366,7 +365,7 @@
       </component>
       <component id="4be7e" class="javax.swing.JCheckBox" binding="check_frontdisplayed">
         <constraints>
-          <grid row="30" column="10" row-span="1" col-span="7" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="29" column="10" row-span="1" col-span="7" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
