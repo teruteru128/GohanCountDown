@@ -6,7 +6,7 @@
 
     <groupId>net.hinyari.gohancountdown</groupId>
     <artifactId>GohanCountDown</artifactId>
-    <version>2019b</version>
+    <version>2019b1</version>
     <build>
         <plugins>
             <plugin>

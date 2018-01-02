@@ -27,7 +27,7 @@ public class CountDownTimer
     private boolean isNTPLoad = false;
     private NTPUDPClient ntpClient;
     private TimeInfo timeInfo;
-    private String ntpAddress;
+    private final String ntpAddress = "http://ntp-a1.nict.go.jp/cgi-bin/jst";
 
     private ScheduledExecutorService service;
 
@@ -36,14 +36,7 @@ public class CountDownTimer
         // メインクラスのインスタンス読み込み
         this.main = main;
         try {
-            // NTP時刻合わせクライアントインスタンスを生成
-            //ntpClient = new NTPUDPClient();
-            // NTPクライアントをopen
-            //ntpClient.open();
-            // 接続先ホスト情報
-            //ntpAddress = "ntp.nict.jp";
-            // 時刻情報を取得する
-            //timeInfo = ntpClient.getTime(InetAddress.getByName(ntpAddress));
+            // NTP時刻を取得する
             long ntptime = getNTPTime();
             
             // システム時間を取得する
@@ -58,8 +51,6 @@ public class CountDownTimer
             // NTPで取得した時間とシステム時間の差が1000ms以内だった場合
             // 誤差が1000ms以内であるのでシステム時間を使用する
             if (errortime < 1000 && errortime > -1000) {
-                // NTPは必要ないと判断し、クローズする
-                //ntpClient.close();
                 main.getLabel_server().setText("NTP時刻との誤差が小さいため");
                 main.getLabel_appstatus().setText("システム時刻を使用します");
                 // 特に意味のないような気がする
@@ -68,6 +59,7 @@ public class CountDownTimer
                 // NTP時間を利用する
                 isNTPLoad = true;
             }
+            log("isNTPLoad " + isNTPLoad);
             // スレッドを立てる
             service = Executors.newSingleThreadScheduledExecutor();
             // 250ms間隔でスレッドを実行する
@@ -85,49 +77,44 @@ public class CountDownTimer
         }
     }
     
-    private int time = 0;
-    private int takeNTPtime = 0;
+    private int time = 60;
 
     private void reloadDisplay()
     {
-        /*
-        if (ntpClient == null) {
-            main.getLabel_appstatus().setText("NTPクライアントが存在しません。");
-            return;
-        }
-        */
-                
         // NTPクライアントが
         if (isNTPLoad) {
-            if (!ntpClient.isOpen()) {
-                main.getLabel_appstatus().setText("NTPサーバに接続出来ませんでした");
-                return;
-            }
-            
             try {
                 // 60回目（30秒目の試行）
                 if (time % 60 == 0) {
-                    // NTPサーバから取得した時刻情報を入れる
-                    //timeInfo = ntpClient.getTime(InetAddress.getByName(ntpAddress));
-                    rawTime = getNTPTime()/*timeInfo.getReturnTime()*/;
-                    main.getLabel_server().setText("ntp.nict.jp");
-                    main.getLabel_appstatus().setText("正常");
-                    takeNTPtime++;
-                } else {
-                    main.getLabel_appstatus().setText("正常 - " + divide60(time) + "秒後に再取得します…");
+                    main.getLabel_appstatus().setText("取得中");
+                    rawTime = getNTPTime();
+                    time = time - 60;
+                    long errortime = rawTime - System.currentTimeMillis();
+                    main.getLabel_server().setText(ntpAddress);
+                    log("int time " + time);
                     
+                    // NTPで取得した時間とシステム時間の差が1000ms以内だった場合
+                    // 誤差が1000ms以内であるのでシステム時間を使用する
+                    if (errortime < 1000 && errortime > -1000) {
+                        main.getLabel_server().setText("NTP時刻との誤差が小さいため");
+                        main.getLabel_appstatus().setText("システム時刻を使用します");
+                        isNTPLoad = false;
+                    }
+                } else {
+                    main.getLabel_appstatus().setText("時刻を" + divide60(time) + "秒後に再取得します…");
+                    if (time % 2 == 0) rawTime  = rawTime + 1000;
+                    log("int time " + time);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
                 main.getLabel_appstatus().setText("接続時にエラー");
             }
-            
             time++;
         } else {
             rawTime = System.currentTimeMillis();
         }
         
-        log((isNTPLoad ? "NTP時刻 " : "システム時刻 " + rawTime));
+        log(((isNTPLoad ? "最終NTP時刻 " : "システム時刻 ") + rawTime));
         
         Instant nowTimeInstance = Instant.ofEpochMilli(rawTime);
         // 現在時刻を埋め込む
@@ -174,17 +161,16 @@ public class CountDownTimer
         // 0回目の試行だった場合30秒後を返す
         if (i == 0 || i == 1) return "30";
         
-        // NTP取得実績がある場合試行回数から30を引く
-        if (takeNTPtime != 0) {
-            i = i - takeNTPtime * 30;
-        }
-        
         // 2で割り切れない奇数
         if (i % 2 == 1) {
             i--;
         }
+
+        i = i / 2;
         
-        return String.valueOf(i/2);
+        log("divide 60 " + i);
+        
+        return String.valueOf(30 - i);
     }
         
     private void log(Object msg)
@@ -193,10 +179,9 @@ public class CountDownTimer
         logger.info(String.valueOf(msg));
     }
     
-    private final String userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36";
     private long getNTPTime() throws IOException
     {
-        Document document = Jsoup.connect("http://ntp-a1.nict.go.jp/cgi-bin/jst").userAgent(userAgent).get();
+        Document document = Jsoup.connect(ntpAddress).get();
         Elements elements = document.body().getAllElements();
         StringBuilder sb = new StringBuilder();
         for (Element element : elements) {
