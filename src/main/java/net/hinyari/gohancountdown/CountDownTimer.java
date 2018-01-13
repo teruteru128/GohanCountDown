@@ -98,6 +98,7 @@ public class CountDownTimer
                     if (errortime < 1000 && errortime > -1000) {
                         main.getLabel_server().setText("NTP時刻との誤差が小さいため");
                         main.getLabel_appstatus().setText("システム時刻を使用します");
+                        main.getLabel_errortime().setText(String.valueOf(errortime));
                         isNTPLoad = false;
                     }
                 } else {
